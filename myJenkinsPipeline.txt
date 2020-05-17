@@ -4,16 +4,20 @@ pipeline {
 		stage("checkout") {
 			steps {
 				echo "checking out the app from github..."
+				echo "CHANGE_ID 	--- change_id_value"
 			}
 		}
 		stage("build") {
 			steps {
 				echo "building the app locally..."
+				echo "BUILD_NUMBER 	--- build_number_value"
+				echo "BUILD_TAG 	--- build_tag_value"
 			}
 		}
 		stage("test") {
 			steps {
 				echo "testing the app..."
+				echo "build_display_name = BUILD_DISPLAY_NAME"
 			}
 		}
 		stage("deploy") {
