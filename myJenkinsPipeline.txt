@@ -9,8 +9,10 @@ pipeline {
 		stage("build") {
 			steps {
 				echo "building the app locally..."
-				echo "${BUILD_NUMBER} 	--- build_number_value"
-				echo "${BUILD_TAG} 	--- build_tag_value"
+				echo "JENKINS_URL=${JENKINS_URL}"
+				echo "BUILD_NUMBER=${BUILD_NUMBER}"
+				echo "BUILD_TAG=${BUILD_TAG}"
+				echo "WORKSPACE=${WORKSPACE}"
 			}
 		}
 		stage("test") {
