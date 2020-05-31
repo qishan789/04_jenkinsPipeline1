@@ -10,6 +10,10 @@ pipeline {
 			steps {
 				echo "building the app locally..."
 				echo "JENKINS_URL=${JENKINS_URL}"
+				echo "BUILD_URL=${BUILD_URL}"
+				echo "EXECUTOR_NUMBER=${EXECUTOR_NUMBER}"
+				echo "JOB_NAME=${JOB_NAME}"
+				echo "JNODE_NAME=${NODE_NAME}"
 				echo "BUILD_NUMBER=${BUILD_NUMBER}"
 				echo "BUILD_TAG=${BUILD_TAG}"
 				echo "WORKSPACE=${WORKSPACE}"
